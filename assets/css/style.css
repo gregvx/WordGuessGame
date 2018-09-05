@@ -1,0 +1,12 @@
+
+
+body {
+    text-align: center;
+}
+
+.gameBox {
+    display: inline-block;
+    width: 600px;
+    height: 400px;
+    background-color: red;
+}
