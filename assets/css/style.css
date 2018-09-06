@@ -4,6 +4,12 @@ body {
     text-align: center;
 }
 
+h1 {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 8em;
+    padding: 30px;
+}
+
 .gameBox {
     display: inline-block;
     width: 600px;
