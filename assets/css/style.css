@@ -10,3 +10,13 @@ body {
     height: 400px;
     background-color: red;
 }
+
+/* the box/div images for the gallows will be 350px wide 300 px tall */
+.gallowsBox {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 350px;
+    height: 300px;
+    background-color: white;
+}
