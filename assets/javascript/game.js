@@ -30,7 +30,22 @@ document.onkeyup = function(event) {
                 currentLettersTried.push(userInput);
                 //check if letter is good or bad
                 if (currentWord.includes(userInput)) {
-                    alert("the word " + currentWord + "contains the letter " + userInput);
+                    // alert("the word " + currentWord + "contains the letter " + userInput);
+                    //update the word display in the view
+                    //conclude round if word is now complete
+                    var unguessedLetterExists = false;
+                    for (i=0; i<currentWord.length; i++) {
+                        if (!currentLettersTried.includes(currentWord[i])) {
+                            //note the ! so this means there is still a letter than hasn't been guessed yet
+                            unguessedLetterExists = true;
+                            // alert("at this point, we know the letter " + currentWord[i] + " has not yet been guessed.");
+                        }
+                    }
+                    if (unguessedLetterExists === false) {
+                        alert("now, we know every letter has been guessted.");
+                        totalWins++;
+                        updateScoreBoard()
+                    }
                 }
                 else {
                     //here, a bad letter was guessed, so time to punish
@@ -40,6 +55,7 @@ document.onkeyup = function(event) {
                     if (numberOfBadGuesses === 7) {
                         //update loss counter notify user what correct word was, wait for user to strart new game
                         totalLosses++;
+                        updateScoreBoard();
                     }
 
                 }
@@ -72,4 +88,12 @@ function isLetter(str) {
   //this function takes a letter and checks to see if in the array currentLettersTried
   function letterHasBeenTried(c) {
       return currentLettersTried.includes(c);
+  }
+
+  //this function puts the wins and losses totals in the upper right corner of the game window
+  function updateScoreBoard() {
+    //   alert("now, we are going to update the scoreboard.");
+      var scoreText = "Wins: " + totalWins + " Losses: " + totalLosses;
+    //   alert("now, the text should read " + scoreText);
+      
   }
