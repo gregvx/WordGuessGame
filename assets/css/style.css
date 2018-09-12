@@ -18,20 +18,44 @@ h1 {
     text-align: left;
 }
 
-/* the box/div images for the gallows will be 350px wide 300 px tall */
-.gallowsBox {
+.topSection {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
+    display: none;
+    width: 560px;
+    height: 300px;
+    /* background-color:thistle; */
     top: 20px;
     left: 20px;
+    hidden: true;
+}
+
+.openingSplash {
+    position: relative;
+    float: center;
+    background-color: white;
+    text-align: center;
+    font-size: 3em;
+    top: 50px;
+}
+
+/* the box/div images for the gallows will be 350px wide 300 px tall */
+.gallowsBox {
+    /* position: relative; */
+    display: inline-block;
+    /* top: 20px; */
+    /* left: 20px; */
     width: 350px;
     height: 300px;
     background-color: white;
 }
 .scoreBox {
-    position: relative;
-    background-color: teal;
-    width: 100px;
+    /* position: relative; */
+    /* display: inline-block; */
+    /* background-color: teal; */
+    /* top: 20px; */
+    /* left: 320px; */
+    width: 210px;
     height: 300px;
     float: right;
 }
@@ -39,25 +63,43 @@ h1 {
 .scoreBoard {
     position: relative;
     /* display: inline-block; */
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
     float: right;
     top: 0px;
     right: 0px;
 }
 
 .badLetters {
-    position: absolute;
+    position: relative;
     float: right;
     top: 0px;
     right: 0px;
-    width: 120px;
+    width: 200px;
     height: 60px;
-    background-color:blue;
+    /* background-color:blue; */
+    font-size: larger;
+}
+
+.bottomSection {
+    position: relative;
+    top: 30px;
+    text-align: center;
+    height: 50px;
+    /* background-color: rosybrown; */
 }
 
 .wordDisplay {
-    position: relative;
-    float: center;
+    /* position: relative; */
+    display: inline-block;
+    /* top: 30px; */
+    text-align: center;
+    /* float: center; */
+    font-size: 2em;
     background-color: green;
+    font-family: 'Mountains of Christmas', cursive;
 
+}
+
+.wordDisplay p {
+    text-align: center;
 }

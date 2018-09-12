@@ -15,22 +15,29 @@
 <body>
     <h1>Holiday Hangman</h1>
     <div class="gameBox">
-        <!-- the box/div images for the gallows will be 350px wide 300 px tall -->
-        <div class="gallowsBox">
-            <img id="gallowsImg" class="gallowsImg" src="assets/images/gallows0.jpg">
+        <div class="openingSplash" id="openingSplash">
+            <p>Press any key to begin.</p>
         </div>
-        <!-- the box to the right of the gallows will contain the score and bad letters
-            and it is 100px wide, 300 px tall-->
-        <div class="scorebox">
-            <div class="scoreBoard">
-                <p>Wins: Losses: </p>
+        <div class="topSection" id="topSection">
+            <!-- the box/div images for the gallows will be 350px wide 300 px tall -->
+            <div class="gallowsBox">
+                <img id="gallowsImg" class="gallowsImg" src="assets/images/gallows0.jpg">
             </div>
-            <div class="badLetters">
-                <p>A B C</p>
+            <!-- the box to the right of the gallows will contain the score and bad letters
+                        and it is 100px wide, 300 px tall-->
+            <div class="scoreBox">
+                <div class="scoreBoard" id="scoreBoard">
+                    <p>Wins: Losses: </p>
+                </div>
+                <div class="badLetters" id="badLetters">
+                    <p></p>
+                </div>
             </div>
         </div>
-        <div class="wordDisplay">
-            <p>C--C--</p>
+        <div class="bottomSection">
+            <div class="wordDisplay" id="wordDisplay">
+                <p></p>
+            </div>
         </div>
     </div>
 </body>
